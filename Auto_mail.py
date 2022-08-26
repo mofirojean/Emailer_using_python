@@ -2,7 +2,8 @@ from email import message
 import smtplib
 
 
-try:
+
+
     smtpObj = smtplib.SMTP('smtp.gmail.com', 587) #Creating an SMTP object
     smtpObj.ehlo()  #Sending a hello message to smtp server
     smtpObj.starttls() # for Encryption
@@ -16,5 +17,3 @@ try:
     smtpObj.quit()# quit when done
     print('Email sent')
 
-except Exception as ex: #if message is not sent print the following
-    print("Something went wrong...", ex)

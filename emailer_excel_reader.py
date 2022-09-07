@@ -1,7 +1,9 @@
 """
+*****************************************************************************
     Reads an excel file, extracts the information and store them in
     an organized list which contains a tuple of the information in each
     row in our excel file
+*****************************************************************************
 """
 import openpyxl
 

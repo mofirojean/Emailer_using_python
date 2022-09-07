@@ -1,5 +1,9 @@
-# deals with attaching the document to the email and sending of
-# emails to their various SMTP
+"""
+***********************************************************************************
+    Attaches the document generated from the Template and and sends a customised
+                            email to the users email address
+***********************************************************************************
+"""
 import smtplib
 from decouple import config
 

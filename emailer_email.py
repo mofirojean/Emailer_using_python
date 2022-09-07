@@ -18,13 +18,13 @@ with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
     smtp.login(EMAIL_ADDRESS, EMAIL_PASS)
 
     # creating a simple meassage
-    subject = "Hello Mofiro"
+    subject = "Hello User"
     body = "How are you doing"
 
     msg = f"Subject: {subject}\n\n{body}"
 
     # sending the email
-    smtp.sendmail(EMAIL_ADDRESS, "mofirojean@gmail.com", msg)
+    smtp.sendmail(EMAIL_ADDRESS, "sample-email@gmail.com", msg)
 
 
 

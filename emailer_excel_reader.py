@@ -15,20 +15,20 @@ class ExcelReader:
         self._sheet = None
 
     # Gets the required sheet to extract our data
-    def required_sheet(self, activeSheet):
-        excelDoc = openpyxl.load_workbook(self._excel_doc)
-        rSheet = excelDoc[activeSheet]
-        self._sheet = rSheet
+    def required_sheet(self, active_sheet):
+        excel_doc = openpyxl.load_workbook(self._excel_doc)
+        r_sheet = excel_doc[active_sheet]
+        self._sheet = r_sheet
 
     # Extracts the data store them in a list
     def extract_data_to_list(self):
         # extracts the raw data and keep in a list
         list_data = list()
         for row in self._sheet.iter_rows():
-            primeList = list()
+            prime_list = list()
             for cell in row:
-                primeList.append(cell.value)
-            list_data.append(primeList)
+                prime_list.append(cell.value)
+            list_data.append(prime_list)
         return list_data
 
     # contains the well formatted data in the form a tuple (name, email_address)
